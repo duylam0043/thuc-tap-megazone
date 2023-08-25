@@ -520,7 +520,7 @@
           volutpat.
         </p>
       </div>
-      <form action="/">
+      <form id="myForm" action="/">
         <label for="" class="flex flex-col items-center gap-[6px] self-stretch">
           <h1 class="self-stretch text-[#434343] text-[24px] normal font-[700] leading-[36px]">
             Enquiry form
@@ -532,15 +532,12 @@
         </label>
         <div id="form-field" class="flex flex-col items-center gap-[10px] self-stretch">
           <div id="input-row" class="flex justify-center items-start gap-[10px] self-stretch">
-            <input type="text" placeholder="First name"
-              class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
-            <input type="text" placeholder="Last name"
-              class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+            <input type="text" name="first-name" placeholder="First name" class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+            <input type="text" name="last-name" placeholder="Last name" class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
           </div>
-          <input type="email" placeholder="Email id"
-            class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
-          <input type="text" placeholder="Comments or questions"
-            class="flex h-[210px] px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+          <input type="email" name="email" placeholder="Email id" class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+          <input type="tel" name="phone" placeholder="Phone number" class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+          <input type="text" name="comments" placeholder="Comments or questions" class="flex h-[210px] px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
           <button class="flex flex-col w-[222px] h-[46px] justify-center items-center rounded-[4px] bg-[#4A60A1]">
             <p class="w-[203.124px] text-[#fff] text-center text-[16px] font-[400] leading-normal">
               Submit
@@ -623,7 +620,7 @@
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 

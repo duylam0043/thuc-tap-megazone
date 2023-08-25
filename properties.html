@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties</title>
+
+    <style type="text/tailwindcss">
+      @layer components {
+        .card-property {
+          @apply px-[15px] py-[13px] rounded-[10px] border-[1px] border-[#EAEAEA] bg-white flex-col justify-start items-start gap-[23px] w-[320px];
+        }
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+          fontFamily: {
+            inter: ["Inter"],
+            roboto: ["'Roboto', sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header
+      class="fixed top-0 left-[50%] translate-x-[-50%] px-[80px] py-[22px] bg-[#FFFFFF] w-full"
+    >
+      <div class="max-w-[1760px] flex justify-between items-center">
+        <a
+          class="flex justify-start items-center gap-[8px] cursor-pointer"
+          href="#"
+        >
+          <div class="flex justify-center items-center w-[44px] aspect-square">
+            <img src="./assets/home-icon.png" alt="" />
+          </div>
+          <div class="flex flex-col justify-start items-start">
+            <h1
+              class="font-inter text-[24px] normal font-[600] leading-[24px] tracking-[0.048px] text-[#4A60A1]"
+            >
+              REIS
+            </h1>
+            <h2
+              class="font-inter text-[14px] normal font-[500] leading-[16px] text-[#4A60A1]"
+            >
+              Real State
+            </h2>
+          </div>
+        </a>
+        <ul class="flex items-center gap-[30px]">
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            HOME
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            ABOUT US
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            OUR AGENTS
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            PROPERTIES
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            GALLERY
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            BLOG
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            CONTACT US
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            SEARCH
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section
+      id="hero-banner"
+      class="mt-[88px] bg-[url('./assets/source.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center py-[120px] h-[240px]"
+    >
+      <h1
+        class="font-publicSan text-[52px] normal font-[600] leading-[72px] text-center text-[#FFFFFF]"
+      >
+        Properties
+      </h1>
+      <p
+        class="mt-[24px] font-inter text-[20px] normal font-[400] leading-[28px] text-[#FFFFFF] text-center"
+      >
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia curae; Proin sodales ultrices nulla blandit volutpat.
+      </p>
+    </section>
+
+    <section
+      class="mb-[95px] flex flex-wrap justify-center items-start gap-[8px] w-full"
+    >
+      <div
+        id="container"
+        class="flex w-full mt-[64px] mb-[95px] justify-center items-center gap-[717px]"
+      >
+        <div id="sort" class="flex items-end gap-[16px]">
+          <div id="option" class="flex items-start gap-[8px]">
+            <img src="./assets/ListBullets.svg" alt="" />
+            <img src="./assets/SquaresFour.svg" alt="" />
+          </div>
+          <p
+            class="text-[#1b1d1f] font-inter text-[16px] font-normal font-[400] leading-[24px]"
+          >
+            Sort by:
+          </p>
+          <p class="text-[#889099] flex items-center gap-[4px] font-inter">
+            Default Order
+          </p>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover overflow-hidden rounded-[50%]"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card1.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div id="more-detail" class="flex items-start px-[10px] gap-[17px]">
+          <div class="flex items-center gap-[4.354px]">
+            <img src="./assets/Car.svg" alt="" />
+            <p
+              class="text-[#6d737a] font-inter text-[10.844px] font-normal font-[500] leading-[16.266px]"
+            >
+              4
+            </p>
+          </div>
+          <div class="flex items-center gap-[4.354px]">
+            <img src="./assets/Bathtub.svg" alt="" />
+            <p
+              class="text-[#6d737a] font-inter text-[10.844px] font-normal font-[500] leading-[16.266px]"
+            >
+              4
+            </p>
+          </div>
+          <div class="flex items-center gap-[4.354px]">
+            <img src="./assets/ArrowsOut.svg" alt="" />
+            <p
+              class="text-[#6d737a] font-inter text-[10.844px] font-normal font-[500] leading-[16.266px]"
+            >
+              2,096.00 ft
+            </p>
+          </div>
+        </div>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover overflow-hidden rounded-[50%]"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover overflow-hidden rounded-[50%]"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover overflow-hidden rounded-[50%]"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover overflow-hidden rounded-[50%]"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover overflow-hidden rounded-[50%]"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover overflow-hidden rounded-[50%]"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-property">
+        <div class="w-full h-[200px]">
+          <img
+            src="./assets/card.jpeg"
+            alt=""
+            class="block w-full object-cover rounded-[10px] overflow-hidden"
+          />
+        </div>
+        <h1
+          class="p-[10px] font-inter text-[15px] font-[500] leading-[20px text-[#363a3d]]"
+        >
+          92 ALLIUM PLACE, ORLANDO FL 32827
+        </h1>
+        <h1
+          class="p-[10px] font-inter text-[14px] font-[600] leading-[20px] text-[#4a60a1]"
+        >
+          $ 590,693
+        </h1>
+        <div class="p-[10px] flex justify-between items-center gap-[17px]">
+          <div class="flex justify-start items-center gap-[4px]">
+            <div class="w-[18px] aspect-square">
+              <img
+                src="./assets/card1.jpeg"
+                class="w-full h-full block object-cover rounder-[10px] overflow-hidden"
+                alt=""
+              />
+            </div>
+            <div
+              class="font-inter text-[11px] font-[500] leading-[17px] text-[#36a3d]"
+            >
+              Jenny Wilson
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-[9px]">
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/ShareNetwork.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Heart.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-[20px] aspect-square p-[3px] rounded-[1px] bg-[#edeff6] cursor-pointer"
+            >
+              <img
+                src="./assets/Plus.svg"
+                class="block w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex p-[50px] items-start self-stretch">
+      <footer class="flex justify-between items-start flex-1">
+        <div
+          id="contact"
+          class="flex flex-col w-[312px] h-[300px] items-start gap-[20px]"
+        >
+          <div id="logo" class="flex justify-center items-center gap-[8px]">
+            <img
+              src="./assets/home-icon.png"
+              alt=""
+              class="w-[44px] h-[44px]"
+            />
+            <div class="flex flex-col justify-start items-start">
+              <h1
+                class="font-inter text-[24px] normal font-[600] leading-[24px] tracking-[0.048px] text-[#4A60A1]"
+              >
+                REIS
+              </h1>
+              <h2
+                class="font-inter text-[14px] normal font-[500] leading-[16px] text-[#4A60A1]"
+              >
+                Real State
+              </h2>
+            </div>
+          </div>
+          <div
+            id="contact-detail"
+            class="flex flex-col h-[168px] items-start gap-[13px] shrink-0 self-stretch"
+          >
+            <h1
+              class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]"
+            >
+              Contact Us
+            </h1>
+            <p
+              class="text-[#6D737A] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Call : +123 400 123
+            </p>
+            <p
+              class="h-[312px] text-[#6D737A] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Praesent nulla massa, hendrerit vestibulum gravida in, feugiat
+              auctor felis.
+            </p>
+            <p
+              class="text-[#6D737A] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Email: example@mail.com
+            </p>
+          </div>
+          <div id="social" class="flex w-[304px] justify-between items-center">
+            <div
+              id="facebook"
+              class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]"
+            >
+              <img src="./assets/Social Media logo.svg" alt="" />
+            </div>
+            <div
+              id="facebook"
+              class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]"
+            >
+              <img src="./assets/Social Media logo (1).svg" alt="" />
+            </div>
+            <div
+              id="facebook"
+              class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]"
+            >
+              <img src="./assets/Social Media logo (2).svg" alt="" />
+            </div>
+            <div
+              id="facebook"
+              class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]"
+            >
+              <img src="./assets/Social Media logo (3).svg" alt="" />
+            </div>
+            <div
+              id="facebook"
+              class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]"
+            >
+              <img src="./assets/Social Media logo (4).svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div
+          id="features"
+          class="flex flex-col w-[173px] h-[248px] items-start gap-[32px]"
+        >
+          <h1
+            class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]"
+          >
+            Features
+          </h1>
+          <div
+            id="items"
+            class="flex flex-col h-[184px] items-start gap-[16px] shrink-0 self-stretch"
+          >
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Home
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Become a Host
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Pricing
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Blog
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Contact
+            </p>
+          </div>
+        </div>
+        <div
+          id="Company"
+          class="flex flex-col w-[173px] h-[248px] items-start gap-[32px]"
+        >
+          <h1
+            class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]"
+          >
+            Company
+          </h1>
+          <div
+            id="items"
+            class="flex flex-col h-[184px] items-start gap-[16px] shrink-0 self-stretch"
+          >
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              About Us
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Press
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Contact
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Careers
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Blog
+            </p>
+          </div>
+        </div>
+        <div
+          id="features"
+          class="flex flex-col w-[173px] h-[248px] items-start gap-[32px]"
+        >
+          <h1
+            class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]"
+          >
+            Tearms and policies
+          </h1>
+          <div
+            id="items"
+            class="flex flex-col h-[184px] items-start gap-[16px] shrink-0 self-stretch"
+          >
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Terms of services
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Privacy Policy
+            </p>
+            <p
+              class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]"
+            >
+              Security
+            </p>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

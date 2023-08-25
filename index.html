@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+        fontFamily: {
+          inter: ["Inter"],
+          roboto: ["'Roboto', sans-serif"],
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+  <header class="main-header fixed top-0 mx-auto px-[80px] py-[22px] bg-[#FFFFFF] w-full z-[10]">
+    <div class="max-w-[1760px] flex justify-between items-center">
+      <a class="flex justify-start items-center gap-[8px] cursor-pointer" href="#">
+        <div class="flex justify-center items-center w-[44px] aspect-square">
+          <img src="./assets/home-icon.png" alt="" />
+        </div>
+        <div class="flex flex-col justify-start items-start">
+          <h1 class="font-inter text-[24px] normal font-[600] leading-[24px] tracking-[0.048px] text-[#4A60A1]">
+            REIS
+          </h1>
+          <h2 class="font-inter text-[14px] normal font-[500] leading-[16px] text-[#4A60A1]">
+            Real State
+          </h2>
+        </div>
+      </a>
+      <ul class="flex items-center gap-[30px]">
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          HOME
+        </li>
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          ABOUT US
+        </li>
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          OUR AGENTS
+        </li>
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          PROPERTIES
+        </li>
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          GALLERY
+        </li>
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          BLOG
+        </li>
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          CONTACT US
+        </li>
+        <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
+          SEARCH
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="hero-banner"
+    class="mt-[88px] bg-[url('./assets/hero-bg.jpeg')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center py-[120px]">
+    <h1 class="font-publicSan text-[52px] normal font-[600] leading-[72px] text-center text-[#FFFFFF]">
+      Find Your Dream Home
+    </h1>
+    <p class="mt-[24px] font-inter text-[20px] normal font-[400] leading-[28px] text-[#FFFFFF] text-center">
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia curae; Proin sodales ultrices nulla blandit volutpat.
+    </p>
+    <div class="flex justify-center items-start mt-[64px] gap-[10px]">
+      <button
+        class="px-[24px] py-[12px] rounded-[4px] flex justify-center items-center font-inter text-[16px] normal font-[500] leading-[24px] bg-[#4A60A1] text-[#FFFFFF]">
+        Rent
+      </button>
+      <button
+        class="px-[24px] py-[12px] rounded-[4px] flex justify-center items-center font-inter text-[16px] normal font-[500] leading-[24px] bg-[#FFFFFF] text-[#6E80B4]">
+        Sale
+      </button>
+    </div>
+    <div class="mt-[17px] flex justify-between items-center py-[32px] px-[62px] max-w-[1400px] bg-[#FFFFFF] rounded-[8px] gap-[20px] w-full">
+      <div class="flex flex-col justify-start items-start gap-[16px]">
+        <p class="font-inter text-[16px] normal font-[600] leading-[24px] capitalize text-[#2C3A61]">
+          Locations
+        </p>
+        <div class="hero-dropdown-container w-full flex justify-between items-center cursor-pointer relative min-w-[200px]">
+          <p class="choose-option font-inter text-[16px] normal font-[600] leading-[24px] capitalize text-[#889099]">
+            Select your city
+          </p>
+          <div class="hero-dropdown-arrow w-[10px] h-[6px]">
+            <img src="./assets/arrow-down.png " alt="">
+          </div>
+          <div class="hero-dropdown-options absolute top-[24px] left-0 border-x-[1px] rounded-[8px] bg-[#FFFFFF] w-full overflow-hidden">
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York1</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York2</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York3</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York4</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-start items-start gap-[16px]">
+        <p class="font-inter text-[16px] normal font-[600] leading-[24px] capitalize text-[#2C3A61]">
+          Property Type
+        </p>
+        <div class="hero-dropdown-container w-full flex justify-between items-center cursor-pointer relative min-w-[200px]">
+          <p class="choose-option font-inter text-[16px] normal font-[600] leading-[24px] capitalize text-[#889099]">
+            Select property type
+          </p>
+          <div class="hero-dropdown-arrow w-[10px] h-[6px]">
+            <img src="./assets/arrow-down.png " alt="">
+          </div>
+          <div class="hero-dropdown-options absolute top-[24px] left-0 border-x-[1px] rounded-[8px] bg-[#FFFFFF] w-full overflow-hidden">
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York1</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York2</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York3</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York4</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-start items-start gap-[16px]">
+        <p class="font-inter text-[16px] normal font-[600] leading-[24px] capitalize text-[#2C3A61]">
+          Rent Range
+        </p>
+        <div class="hero-dropdown-container w-full flex justify-between items-center cursor-pointer relative min-w-[200px]">
+          <p class="choose-option font-inter text-[16px] normal font-[600] leading-[24px] capitalize text-[#889099]">
+            Select rent range
+          </p>
+          <div class="hero-dropdown-arrow w-[10px] h-[6px]">
+            <img src="./assets/arrow-down.png " alt="">
+          </div>
+          <div class="hero-dropdown-options absolute top-[24px] left-0 border-x-[1px] rounded-[8px] bg-[#FFFFFF] w-full overflow-hidden">
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York1</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York2</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York3</div>
+            <div class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]">New York4</div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="px-[24px] py-[12px] rounded-[4px] flex justify-center items-center font-inter text-[16px] normal font-[500] leading-[24px] bg-[#4A60A1] text-[#FFFFFF]">
+        Search
+      </button>
+    </div>
+  </section>
+
+  <section id="area-images" class="mt-[53px] flex flex-col justify-start items-center gap-[45px] w-full">
+    <div class="flex px-[30px] flex-col items-center max-w-[1300px] w-full">
+      <p class="self-strech font-inter text-[40px] font-[600] normal leading-[48px] text-[#1E2640] text-center">Properties by Area</ơ>
+      <p class="self-strech font-inter text-[20px] font-[400] normal leading-[28px] text-[#889099] text-center mt-[24px]">Vestibulum ante ipsum primis in
+        faucibus orci
+        luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat.</p>
+      <div class="flex flex-wrap mt-[45px] justify-center items-start gap-[24px] gap-y-[24px] w-full" id="CardsRoot">
+        <div
+          class="flex flex-col items-start justify-start gap-[11px] w-[calc((100%-52px)/3)] bg-[url('./assets/card1.jpeg')] bg-cover bg-no-repeat bg-center h-[241px] rounded-[8px] p-[16px]">
+          <p class="font-inter text-[24px] font-[600] leading-[32px] tracking-[0.048px] text-[#FFFFFF]">Centerville</p>
+          <p class="font-inter text-[16px] font-[400] leading-[24px] text-[#FFFFFF]">25 listings</p>
+        </div>
+        <div
+          class="flex flex-col items-start justify-start gap-[11px] w-[calc((100%-52px)/3)] bg-[url('./assets/card2.png')] bg-cover bg-no-repeat bg-center h-[241px] rounded-[8px] p-[16px]">
+          <p class="font-inter text-[24px] font-[600] leading-[32px] tracking-[0.048px] text-[#FFFFFF]">Centerville</p>
+          <p class="font-inter text-[16px] font-[400] leading-[24px] text-[#FFFFFF]">25 listings</p>
+        </div>
+        <div
+          class="flex flex-col items-start justify-start gap-[11px] w-[calc((100%-52px)/3)] bg-[url('./assets/card3.png')] bg-cover bg-no-repeat bg-center h-[241px] rounded-[8px] p-[16px]">
+          <p class="font-inter text-[24px] font-[600] leading-[32px] tracking-[0.048px] text-[#FFFFFF]">Centerville</p>
+          <p class="font-inter text-[16px] font-[400] leading-[24px] text-[#FFFFFF]">25 listings</p>
+        </div>
+        <div
+          class="flex flex-col items-start justify-start gap-[11px] bg-red-500 w-[calc((100%-24px)/2)] bg-[url('./assets/card4.png')] bg-cover bg-no-repeat bg-center h-[241px] rounded-[8px] p-[16px]">
+          <p class="font-inter text-[24px] font-[600] leading-[32px] tracking-[0.048px] text-[#FFFFFF]">Centerville</p>
+          <p class="font-inter text-[16px] font-[400] leading-[24px] text-[#FFFFFF]">25 listings</p>
+        </div>
+        <div
+          class="flex flex-col items-start justify-start gap-[11px] bg-red-500 w-[calc((100%-24px)/2)] bg-[url('./assets/card5.png')] bg-cover bg-no-repeat bg-center h-[241px] rounded-[8px] p-[16px]">
+          <p class="font-inter text-[24px] font-[600] leading-[32px] tracking-[0.048px] text-[#FFFFFF]">Centerville</p>
+          <p class="font-inter text-[16px] font-[400] leading-[24px] text-[#FFFFFF]">25 listings</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col items-center py-[70px] gap-[107px] self-stretch bg-[#EDEFF6]">
+    <div class="flex flex-col pt-[75px] items-center gap-[54px] self-stretch">
+      <div class="flex flex-col px-[30px] items-center gap-[24px] self-stretch">
+        <h1 class="self-stretch text-[#1e2640] text-center font-inter text-[40px] normal font-[600] leading-[48px]">
+          Properties by Area
+        </h1>
+        <p class="self-stretch text-[#889099] text-center font-inter text-[20px] normal font-[400px] leading-[28px]">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Proin sodales ultrices nulla blandit
+          volutpat.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center items-center content-center gap-[86px] self-stretch">
+        <div class="flex flex-col min-w-[300px] max-w-[340px] p-[22px] items-start gap-[10px] bg-[#fff]">
+          <div id="content" class="flex flex-col items-start gap-[24px]">
+            <div id="description" class="flex flex-col items-start gap-[24px]">
+              <div class="w-[78px] h-[78px]">
+                <img src="./assets/HomeIcon.svg" alt="home" />
+              </div>
+              <h1 class="text-[#363a3d] text-center font-inter text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">
+                Sell your home
+              </h1>
+              <p class="w-[268px] text-[#889099] font-inter text-[16px] normal font-[400] leading-[24px]">
+                We do a free evaluation to be sure you want to start selling
+              </p>
+              <p class="text-[#4A60A1] font-inter text-[16px] normal font-[400] leading-[24px] cursor-pointer">
+                Read more
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col min-w-[300px] max-w-[340px] p-[22px] items-start gap-[10px] bg-[#fff]">
+          <div id="content" class="flex flex-col items-start gap-[24px]">
+            <div id="description" class="flex flex-col items-start gap-[24px]">
+              <div class="w-[78px] h-[78px]">
+                <img src="./assets/HomeIcon.svg" alt="home" />
+              </div>
+              <h1 class="text-[#363a3d] text-center font-inter text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">
+                Rent your home
+              </h1>
+              <p class="w-[268px] text-[#889099] font-inter text-[16px] normal font-[400] leading-[24px]">
+                We do a free evaluation to be sure you want to start selling
+              </p>
+              <p class="text-[#4A60A1] font-inter text-[16px] normal font-[400] leading-[24px] cursor-pointer">
+                Read more
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col min-w-[300px] max-w-[340px] p-[22px] items-start gap-[10px] bg-[#fff]">
+          <div id="content" class="flex flex-col items-start gap-[24px]">
+            <div id="description" class="flex flex-col items-start gap-[24px]">
+              <div class="w-[78px] h-[78px]">
+                <img src="./assets/HomeIcon.svg" alt="home" />
+              </div>
+              <h1 class="text-[#363a3d] text-center font-inter text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">
+                Buy a home
+              </h1>
+              <p class="w-[268px] text-[#889099] font-inter text-[16px] normal font-[400] leading-[24px]">
+                We do a free evaluation to be sure you want to start selling
+              </p>
+              <p class="text-[#4A60A1] font-inter text-[16px] normal font-[400] leading-[24px] cursor-pointer">
+                Read more
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col min-w-[300px] max-w-[340px] p-[22px] items-start gap-[10px] bg-[#fff]">
+          <div id="content" class="flex flex-col items-start gap-[24px]">
+            <div id="description" class="flex flex-col items-start gap-[24px]">
+              <div class="w-[78px] h-[78px]">
+                <img src="./assets/HomeIcon.svg" alt="home" />
+              </div>
+              <h1 class="text-[#363a3d] text-center font-inter text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">
+                Free marketing
+              </h1>
+              <p class="w-[268px] text-[#889099] font-inter text-[16px] normal font-[400] leading-[24px]">
+                We do a free evaluation to be sure you want to start selling
+              </p>
+              <p class="text-[#4A60A1] font-inter text-[16px] normal font-[400] leading-[24px] cursor-pointer">
+                Read more
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col py-[86px] items-center gap-[39px] self-stretch">
+    <div id="content" class="flex flex-col items-center gap-[40px] self-stretch">
+      <div id="text" class="flex w-[688px] flex-col items-center gap-[24px]">
+        <h1 class="self-stretch text-[#1e2640] text-center font-inter text-[40px] normal font-[600] leading-[48px]">
+          Latest Properties of Rent
+        </h1>
+        <p class="self-stretch text-[#889099] text-center font-inter text-[20px] normal font-[400] leading-[28px]">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Proin sodales ultrices nulla blandit
+          volutpat.
+        </p>
+      </div>
+      <div id="card-row" class="flex flex-wrap px-[10px] justify-center items-center content-center gap-[32px] self-stretch">
+        <div id="card"
+          class="flex flex-col h-[466.991px] min-w-[355px] max-w-[400px] px-[13px] py-[15px] items-start gap-[23px] flex-1 border border-solid border-[#eaeaea] rounded-[10px]">
+          <img src="./assets/card.jpeg" alt="" class="h-[200px] shrink-0 self-stretch rounded-[10px] bg-lightgray-[50%] bg-cover bg-no-repeat" />
+          <h1 class="flex items-start gap-[10px] p-[10px] self-stretch text-[#363A3D] font-inter text-[14.513px] normal font-[500] leading-[20.318px]">
+            92 ALLIUM PLACE, ORLANDO FL 32827
+          </h1>
+          <p class="flex p-[10px] items-start gap-[10px] self-stretch text-[#4A60A1] font-inter text-[13.555px] normal font-[600] leading-[18.977px]">
+            $ 590,693
+          </p>
+          <div class="flex items-start px-[10px] gap-[17px] self-stretch">
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Car.svg" alt="car-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Bathtub.svg" alt="bathtub-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/ArrowsOut.svg" alt="arrow-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                2,096.00 ft
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center self-stretch">
+            <div class="flex items-center gap-[5.805px]">
+              <img src="./assets/Ellipse 1.svg" alt="avatar" />
+              <h1 class="text-[#363A3D] text-center font-inter text-[11.61px] normal font-[500] leading-[17.416px]">
+                Jenny Wilson
+              </h1>
+            </div>
+            <div class="flex items-start gap-[8.708px]">
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/ShareNetwork.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Heart.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Plus.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="card"
+          class="flex flex-col h-[466.991px] min-w-[355px] max-w-[400px] px-[13px] py-[15px] items-start gap-[23px] flex-1 border border-solid border-[#eaeaea] rounded-[10px]">
+          <img src="./assets/Property2.png" alt="" class="h-[200px] shrink-0 self-stretch rounded-[10px] bg-lightgray-[50%] bg-cover bg-no-repeat" />
+          <h1 class="flex items-start gap-[10px] p-[10px] self-stretch text-[#363A3D] font-inter text-[14.513px] normal font-[500] leading-[20.318px]">
+            92 ALLIUM PLACE, ORLANDO FL 32827
+          </h1>
+          <p class="flex p-[10px] items-start gap-[10px] self-stretch text-[#4A60A1] font-inter text-[13.555px] normal font-[600] leading-[18.977px]">
+            $ 590,693
+          </p>
+          <div class="flex items-start px-[10px] gap-[17px] self-stretch">
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Car.svg" alt="car-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Bathtub.svg" alt="bathtub-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/ArrowsOut.svg" alt="arrow-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                2,096.00 ft
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center self-stretch">
+            <div class="flex items-center gap-[5.805px]">
+              <img src="./assets/Ellipse 1.svg" alt="avatar" />
+              <h1 class="text-[#363A3D] text-center font-inter text-[11.61px] normal font-[500] leading-[17.416px]">
+                Jenny Wilson
+              </h1>
+            </div>
+            <div class="flex items-start gap-[8.708px]">
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/ShareNetwork.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Heart.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Plus.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="card"
+          class="flex flex-col h-[466.991px] min-w-[355px] max-w-[400px] px-[13px] py-[15px] items-start gap-[23px] flex-1 border border-solid border-[#eaeaea] rounded-[10px]">
+          <img src="./assets/Property3.png" alt="" class="h-[200px] shrink-0 self-stretch rounded-[10px] bg-lightgray-[50%] bg-cover bg-no-repeat" />
+          <h1 class="flex items-start gap-[10px] p-[10px] self-stretch text-[#363A3D] font-inter text-[14.513px] normal font-[500] leading-[20.318px]">
+            92 ALLIUM PLACE, ORLANDO FL 32827
+          </h1>
+          <p class="flex p-[10px] items-start gap-[10px] self-stretch text-[#4A60A1] font-inter text-[13.555px] normal font-[600] leading-[18.977px]">
+            $ 590,693
+          </p>
+          <div class="flex items-start px-[10px] gap-[17px] self-stretch">
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Car.svg" alt="car-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Bathtub.svg" alt="bathtub-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/ArrowsOut.svg" alt="arrow-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                2,096.00 ft
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center self-stretch">
+            <div class="flex items-center gap-[5.805px]">
+              <img src="./assets/Ellipse 1.svg" alt="avatar" />
+              <h1 class="text-[#363A3D] text-center font-inter text-[11.61px] normal font-[500] leading-[17.416px]">
+                Jenny Wilson
+              </h1>
+            </div>
+            <div class="flex items-start gap-[8.708px]">
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/ShareNetwork.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Heart.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Plus.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="card"
+          class="flex flex-col h-[466.991px] min-w-[355px] max-w-[400px] px-[13px] py-[15px] items-start gap-[23px] flex-1 border border-solid border-[#eaeaea] rounded-[10px]">
+          <img src="./assets/Property4.png" alt="" class="h-[200px] shrink-0 self-stretch rounded-[10px] bg-lightgray-[50%] bg-cover bg-no-repeat" />
+          <h1 class="flex items-start gap-[10px] p-[10px] self-stretch text-[#363A3D] font-inter text-[14.513px] normal font-[500] leading-[20.318px]">
+            92 ALLIUM PLACE, ORLANDO FL 32827
+          </h1>
+          <p class="flex p-[10px] items-start gap-[10px] self-stretch text-[#4A60A1] font-inter text-[13.555px] normal font-[600] leading-[18.977px]">
+            $ 590,693
+          </p>
+          <div class="flex items-start px-[10px] gap-[17px] self-stretch">
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Car.svg" alt="car-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/Bathtub.svg" alt="bathtub-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                4
+              </p>
+            </div>
+            <div class="flex items-center gap-[4.354px]">
+              <img src="./assets/ArrowsOut.svg" alt="arrow-icon" class="w-[17.416px] h-[17.416px]" />
+              <p class="text-[#6d737a] font-inter text-[10.844px] normal font-[500] leading-[16.266px]">
+                2,096.00 ft
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center self-stretch">
+            <div class="flex items-center gap-[5.805px]">
+              <img src="./assets/Ellipse 1.svg" alt="avatar" />
+              <h1 class="text-[#363A3D] text-center font-inter text-[11.61px] normal font-[500] leading-[17.416px]">
+                Jenny Wilson
+              </h1>
+            </div>
+            <div class="flex items-start gap-[8.708px]">
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/ShareNetwork.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Heart.svg" alt="" />
+              </div>
+              <div class="flex p-[2.903px] items-start rounded-[1.451px] bg-[#EDEFF6]">
+                <img src="./assets/Plus.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="cta" class="flex items-start px-[24px] py-[12px] gap-[10px] rounded-[4px] bg-[#4A60A1]">
+      <p class="text-[#fff] text-center font-inter text-[16px] normal font-[500] leading-[24px]">
+        Load more listing
+      </p>
+    </button>
+  </section>
+
+  <section>
+
+  </section>
+
+  <section class="flex px-[5px] py-[86px] justify-center items-start content-start gap-[39px] self-stretch flex-wrap">
+    <div id="content" class="flex flex-col max-w-[900px] px-[10px] items-center gap-[40px] flex-1">
+      <div id="text" class="flex flex-col w-[688px] items-center gap-[24px]">
+        <h1 class="self-stretch text-[#1e2640] text-center font-inter text-[40px] normal font-[600] leading-[48px]">
+          Contact us
+        </h1>
+        <p class="self-stretch text-[#889099] text-center font-inter text-[20px] normal font-[400] leading-[28px]">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Proin sodales ultrices nulla blandit
+          volutpat.
+        </p>
+      </div>
+      <form action="/">
+        <label for="" class="flex flex-col items-center gap-[6px] self-stretch">
+          <h1 class="self-stretch text-[#434343] text-[24px] normal font-[700] leading-[36px]">
+            Enquiry form
+          </h1>
+          <p class="self-stretch text-[#576074] text-[18px] normal font-[400] leading-[30px]">
+            Are you looking for details about a certain property? Ask us a
+            question using the form below.
+          </p>
+        </label>
+        <div id="form-field" class="flex flex-col items-center gap-[10px] self-stretch">
+          <div id="input-row" class="flex justify-center items-start gap-[10px] self-stretch">
+            <input type="text" placeholder="First name"
+              class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+            <input type="text" placeholder="Last name"
+              class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+          </div>
+          <input type="email" placeholder="Email id"
+            class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+          <input type="text" placeholder="Comments or questions"
+            class="flex h-[210px] px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]" />
+          <button class="flex flex-col w-[222px] h-[46px] justify-center items-center rounded-[4px] bg-[#4A60A1]">
+            <p class="w-[203.124px] text-[#fff] text-center text-[16px] font-[400] leading-normal">
+              Submit
+            </p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="flex p-[50px] items-start self-stretch">
+    <footer class="flex justify-between items-start flex-1">
+      <div id="contact" class="flex flex-col w-[312px] h-[300px] items-start gap-[20px]">
+        <div id="logo" class="flex justify-center items-center gap-[8px]">
+          <img src="./assets/home-icon.png" alt="" class="w-[44px] h-[44px]">
+          <div class="flex flex-col justify-start items-start">
+            <h1 class="font-inter text-[24px] normal font-[600] leading-[24px] tracking-[0.048px] text-[#4A60A1]">
+              REIS
+            </h1>
+            <h2 class="font-inter text-[14px] normal font-[500] leading-[16px] text-[#4A60A1]">
+              Real State
+            </h2>
+          </div>
+        </div>
+        <div id="contact-detail" class="flex flex-col h-[168px] items-start gap-[13px] shrink-0 self-stretch">
+          <h1 class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">Contact Us</h1>
+          <p class="text-[#6D737A] text-[16px] normal font-[400] leading-[24px]">Call : +123 400 123</p>
+          <p class="h-[312px] text-[#6D737A] text-[16px] normal font-[400] leading-[24px]">Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor
+            felis.</p>
+          <p class="text-[#6D737A] text-[16px] normal font-[400] leading-[24px]">Email: example@mail.com</p>
+        </div>
+        <div id="social" class="flex w-[304px] justify-between items-center">
+          <div id="facebook" class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]">
+            <img src="./assets/Social Media logo.svg" alt="">
+          </div>
+          <div id="facebook" class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]">
+            <img src="./assets/Social Media logo (1).svg" alt="">
+          </div>
+          <div id="facebook" class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]">
+            <img src="./assets/Social Media logo (2).svg" alt="">
+          </div>
+          <div id="facebook" class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]">
+            <img src="./assets/Social Media logo (3).svg" alt="">
+          </div>
+          <div id="facebook" class="flex flex-col p-[14px] justify-center items-center gap-[10px] rounded-[4px] bg-[#EDEFF6]">
+            <img src="./assets/Social Media logo (4).svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="features" class="flex flex-col w-[173px] h-[248px] items-start gap-[32px]">
+        <h1 class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">Features</h1>
+        <div id="items" class="flex flex-col h-[184px] items-start gap-[16px] shrink-0 self-stretch">
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Home</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Become a Host</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Pricing</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Blog</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Contact</p>
+        </div>
+      </div>
+      <div id="Company" class="flex flex-col w-[173px] h-[248px] items-start gap-[32px]">
+        <h1 class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">Company</h1>
+        <div id="items" class="flex flex-col h-[184px] items-start gap-[16px] shrink-0 self-stretch">
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">About Us</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Press</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Contact</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Careers</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Blog</p>
+        </div>
+      </div>
+      <div id="features" class="flex flex-col w-[173px] h-[248px] items-start gap-[32px]">
+        <h1 class="text-[#1b1d1f] text-[24px] normal font-[600] leading-[32px] tracking-[0.048px]">Tearms and policies</h1>
+        <div id="items" class="flex flex-col h-[184px] items-start gap-[16px] shrink-0 self-stretch">
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Terms of services</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Privacy Policy</p>
+          <p class="text-[#6d737a] text-[16px] normal font-[400] leading-[24px]">Security</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+  <script src="./scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,11 +1,11 @@
 const realEstate = {
-
-  heroBannerPosition: $("#hero-banner")[0].offsetTop ? $("#hero-banner")[0].offsetTop : 100000,
+  heroBannerPosition: $("#hero-banner")[0].offsetTop
+    ? $("#hero-banner")[0].offsetTop
+    : 100000,
   lastScroll: 0,
 
   // Handle DOM Events
   handleDomEvents: function () {
-
     // Handle scroll event
     $(window).scroll(function () {
       const currentScroll = this.scrollY;
@@ -37,21 +37,53 @@ const realEstate = {
       }
     });
 
-    // // Handle select option
+    // Handle select option
     $(".hero-dropdown-option").click(function () {
       const currentOption = $(this).text();
-      $(this).closest(".hero-dropdown-container").find(".choose-option").text(currentOption);
+      $(this)
+        .closest(".hero-dropdown-container")
+        .find(".choose-option")
+        .text(currentOption);
     });
   },
 
   init: function () {
     this.handleDomEvents();
-  }
-
+  },
 };
+
+$("#form-abc").validate({
+  rules: {
+    firstname: "required",
+    lastname: "required",
+    email: {
+      required: true,
+      email: true,
+    },
+  },
+  message: {
+    firstname: {
+      required: "Please enter your firstname",
+      minlength: "Your firstname must consist of at least 3 characters",
+    },
+    lastname: {
+      required: "Please enter your lastname",
+      minlength: "Your lastname must consist of at least 3 characters",
+    },
+    email: "Please enter a valid email address",
+  },
+  submitHandler: function (form, event) {
+    console.log(form);
+    console.log(event);
+    return false;
+  },
+});
+
+// $("#form-abc").submit(function (e) {
+//   e.preventDefault();
+//   console.log(e);
+// });
 
 $(document).ready(function () {
   realEstate.init();
-
-  
 });

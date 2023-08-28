@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+          fontFamily: {
+            inter: ["Inter"],
+            roboto: ["'Roboto', sans-serif"],
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header
+      class="main-header fixed top-0 mx-auto px-[80px] py-[22px] bg-[#FFFFFF] w-full z-[10] whitespace-nowrap"
+    >
+      <div class="max-w-[1760px] flex justify-between items-center">
+        <a
+          class="flex justify-start items-center gap-[8px] cursor-pointer"
+          href="/index.html"
+        >
+          <div class="flex justify-center items-center w-[44px] aspect-square">
+            <img src="./assets/home-icon.png" alt="" />
+          </div>
+          <div class="flex flex-col justify-start items-start">
+            <h1
+              class="font-inter text-[24px] normal font-[600] leading-[24px] tracking-[0.048px] text-[#4A60A1]"
+            >
+              REIS
+            </h1>
+            <h2
+              class="font-inter text-[14px] normal font-[500] leading-[16px] text-[#4A60A1]"
+            >
+              Real State
+            </h2>
+          </div>
+        </a>
+        <ul class="flex items-center gap-[30px]">
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            HOME
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            ABOUT US
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            OUR AGENTS
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            PROPERTIES
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            GALLERY
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            BLOG
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            CONTACT US
+          </li>
+          <li
+            class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer"
+          >
+            SEARCH
+          </li>
+          <div
+            class="hero-dropdown-container w-full flex justify-between items-center cursor-pointer relative min-w-[200px]"
+          >
+            <li
+              class="choose-option font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] hover:text-[#4a60a1] cursor-pointer"
+            >
+              SIGN UP
+            </li>
+            <div
+              class="hero-dropdown-options flex flex-col absolute top-[24px] left-0 border-x-[1px] rounded-[8px] bg-[#FFFFFF] w-full overflow-hidden"
+            >
+              <a
+                class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]"
+                href="/signup.html"
+                >Sign up</a
+              >
+              <a
+                class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]"
+                href="/signin.html"
+                >Sign in</a
+              >
+            </div>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <section
+      id="hero-banner"
+      class="flex px-[5px] py-[86px] justify-center items-start content-start gap-[39px] self-stretch flex-wrap"
+    >
+      <form action="/" id="signup">
+        <label for="" class="flex flex-col items-center gap-[6px] self-stretch">
+          <h1
+            class="self-stretch text-[#434343] text-[24px] normal font-[700] leading-[36px]"
+          >
+            Sign Up
+          </h1>
+        </label>
+        <div
+          id="form-field"
+          class="flex flex-col items-center gap-[10px] self-stretch"
+        >
+          <div
+            id="input-row"
+            class="flex justify-center items-start gap-[10px] self-stretch"
+          >
+            <input
+              type="text"
+              placeholder="First name"
+              name="firstname"
+              class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]"
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              name="lastname"
+              class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]"
+            />
+          </div>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]"
+          />
+          <input
+            type="text"
+            placeholder="Email id"
+            name="email"
+            class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]"
+          />
+          <input
+            type="text"
+            placeholder="Phone Number"
+            name="phone"
+            class="flex px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]"
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            class="flex h-[210px] px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]"
+          />
+          <input
+            type="password"
+            name="confirm_password"
+            placeholder="Re-type Password"
+            class="flex h-[210px] px-[12px] py-[16px] flex-col items-start flex-1 self-stretch border border-1 border-solid border-[rgba(0,0,0,0.5)]"
+          />
+          <button
+            type="submit"
+            class="flex flex-col w-[222px] h-[46px] justify-center items-center rounded-[4px] bg-[#4A60A1]"
+          >
+            <p
+              class="w-[203.124px] text-[#fff] text-center text-[16px] font-[400] leading-normal"
+            >
+              Register
+            </p>
+          </button>
+        </div>
+      </form>
+    </section>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

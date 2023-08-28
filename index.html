@@ -30,7 +30,7 @@
 </head>
 
 <body>
-  <header class="main-header fixed top-0 mx-auto px-[80px] py-[22px] bg-[#FFFFFF] w-full z-[10]">
+  <header class="main-header fixed top-0 mx-auto px-[80px] py-[22px] bg-[#FFFFFF] w-full z-[10] whitespace-nowrap">
     <div class="max-w-[1760px] flex justify-between items-center">
       <a class="flex justify-start items-center gap-[8px] cursor-pointer" href="#">
         <div class="flex justify-center items-center w-[44px] aspect-square">
@@ -70,6 +70,15 @@
         <li class="font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] cursor-pointer">
           SEARCH
         </li>
+        <div class="hero-dropdown-container w-full flex justify-between items-center cursor-pointer relative min-w-[200px]">
+          <li class="choose-option font-inter text-[14px] normal font-[400] leading-[22px] text-[#0F1320] hover:font-[600] hover:text-[#4a60a1] cursor-pointer">
+            SIGN UP
+          </li> 
+          <div class="hero-dropdown-options flex flex-col absolute top-[24px] left-0 border-x-[1px] rounded-[8px] bg-[#FFFFFF] w-full overflow-hidden">
+            <a class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]" href="/signup.html">Sign up</a>
+            <a class="hero-dropdown-option border-t-[1px] border-[#E8E8E8] p-[10px]" href="/signin.html">Sign in</a>
+          </div>
+        </div>
       </ul>
     </div>
   </header>

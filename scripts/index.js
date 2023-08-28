@@ -52,6 +52,80 @@ const realEstate = {
   },
 };
 
+//Validate Sign up form
+$("#signup").validate({
+  rules: {
+    firstname: {
+      required: true,
+      //only text allowed
+      RegExp: /^[a-zA-Z]+$/,
+    },
+    lastname: {
+      required: true,
+      //only text allowed
+      RegExp: /^[a-zA-Z]+$/,
+    },
+    username: {
+      required: true,
+      //username cannot contain special characters
+      RegExp: /^[a-zA-Z0-9_]+$/,
+    },
+    email: {
+      required: true,
+      email: true,
+    },
+    password: {
+      required: true,
+      minlength: 6,
+    },
+    confirm_password: {
+      required: true,
+      minlength: 6,
+      equalTo: "#password",
+    },
+    phone: {
+      required: true,
+      minlength: 10,
+      maxlength: 10,
+      number: true,
+    },
+  },
+  message: {
+    firstname: {
+      required: "Please enter your firstname",
+    },
+    lastname: {
+      required: "Please enter your lastname",
+    },
+    username: {
+      required: "Please enter your username",
+      RegExp: "Username cannot contain special characters",
+    },
+    email: "Please enter a valid email address",
+    password: {
+      required: "Please provide a password",
+      minlength: "Your password must be at least 6 characters long",
+    },
+    confirm_password: {
+      required: "Please provide a password",
+      minlength: "Your password must be at least 6 characters long",
+      equalTo: "Please enter the same password as above",
+    },
+    phone: {
+      required: "Please provide a phone number",
+      minlength: "Your phone number must be at least 10 characters long",
+      maxlength: "Your phone number must be at least 10 characters long",
+      number: "Please enter a valid phone number",
+    },
+  },
+  submitHandler: function (event, form) {
+    event.submit;
+    //log all the values as an object
+    console.log(form);
+    console.log(event.target.value);
+  },
+});
+
 $("#form-abc").validate({
   rules: {
     firstname: "required",

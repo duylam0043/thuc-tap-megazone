@@ -53,11 +53,6 @@ const realEstate = {
 
 };
 
-// $( "#form-abc" ).on( "submit", function( event ) {
-//   event.preventDefault();
-//   console.log(event);
-// });
-
 $("#myForm").validate({
   rules: {
     "first-name": "required",
@@ -94,7 +89,6 @@ $("#myForm").validate({
     return false; // Prevent the form from submitting traditionally
   }
 });
-
 
 $(document).ready(function () {
   realEstate.init();
